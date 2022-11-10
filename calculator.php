@@ -1,50 +1,45 @@
 <?php
 
-require_once('header.php');
-//error_reporting(0);
+require_once 'header.php';
+
 ?>
-
-<div class="container">
+<div class="container text-center">
   <div class="row">
-    <div class="col-lg6-m-auto">
+    <div class="col-lg-6 m-auto">
       <div class="card mt-3">
-        <div class="card-header bg-danger text-white">
-          CALCULATOR
+        <div class="card-header bg-dark text-white">
+          <h1>Calculator</h1>
         </div>
-
         <div class="card-body">
-          <form action="calc.php" method="post">
-
-            <div class="form-row mb-2 bg-black text-white">
-              <input type="number" class="form-control" placeholder="First Number" name="val1">
-            </div>
-
-            <div class="form-row mb-2">
-              <select name="operators">
-                <option value="add">+</option>
-                <option value="sub">-</option>
-                <option value="mul">*</option>
-                <option value="div">/</option>
-                <option value="mod">%</option>
-              </select>
-            </div>
-
-            <div class="form-row mb-2">
-              <input type="number" class="form-control" placeholder="Second Number" name="val2">
-            </div>
-
-            <div class="form-row mb-2">
-              <input type="submit" name="calculate" value="Calculate">
-            </div>
-          </form>
-
+              <form action="result.php" method="post">
+                  <div class="form-row mb-3">
+                    <input type="text" class="form-control" placeholder="enter first number" name="num1" >
+                  </div>
+                  
+                  <div class="form-row mb-3">
+                    <input type="text" class="form-control" placeholder="enter second number" name="num2" >
+                  </div>
+                  
+                  <div class="form-row mb-3">
+                      <button name="operator" class="btn btn-primary" type="submit" value="add">ADD</button>
+                      <button name="operator" class="btn btn-primary" type="submit" value="sub">SUB</button>
+                      <button name="operator" class="btn btn-primary" type="submit" value="mul">MUL</button>
+                      <button name="operator" class="btn btn-primary" type="submit" value="div">DIV</button>
+                      <button name="operator" class="btn btn-primary" type="submit" value="mod">MOD</button>
+                  </div>                  
+              </form>
+        </div>
+        <div class="card-footer">
+          <h6>Copyright</h6>
         </div>
       </div>
     </div>
   </div>
 </div>
-</div>
+
 
 <?php
-require_once('footer.php');
+ 
+ require_once "footer.php";
+
 ?>
